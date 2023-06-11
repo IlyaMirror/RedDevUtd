@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+  <style>
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .product {
+      border-radius: 10px;
+      background-color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-weight: bold;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .product p {
+      color: black;
+      text-decoration: none;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    footer {
+      flex-shrink: 0;
+      margin-top: auto;
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+      text-decoration: none;
+    }
+
+    .product a {
+      text-decoration: none;
+    }
+
+    .cart-button {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: white;
+      background-color: #dc3545;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .cart-button:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    .cart-button span:last-child {
+      font-weight: bold;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container">
+        <a class="navbar-brand" href="/">RedDevUtd</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/news">Новости</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/schedule">Расписание</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/gallery">Галерея</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/shop">Магазин</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/players">Игроки</a>
+            </li>
+          </ul>
+          <form class="d-flex ms-auto">
+            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Найти</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between mb-3">
+      <h1>{{ title }}</h1>
+      <a class="cart-button" href="/cart">
+        <span class="bi bi-cart-fill"></span>
+        <span style="font-weight:normal;font-size: 18px;">Корзина</span>
+      </a>
+    </div>
+
+    <div class="product-list">
+      <div class="product">
+        <a href="/product-1">
+          <img src="/assets/product-image-1.jpg" alt="Product Image 1">
+          <p style="color: black; text-decoration: none;">Цена: £70</p>
+          <h3>Manchester United Condivo 22 Pro Jersey</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-2">
+          <img src="/assets/product-image-2.jpg" alt="Product Image 2">
+          <p style="color: black; text-decoration: none;">Цена: £40</p>
+          <h3>Manchester United Tiro 23 Polo Shirt</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-3">
+          <img src="/assets/product-image-3.jpg" alt="Product Image 3">
+          <p style="color: black; text-decoration: none;">Цена: £40</p>
+          <h3>Manchester United Condivo 22 Polo Shirt</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-4">
+          <img src="/assets/product-image-4.jpg" alt="Product Image 4">
+          <p style="color: black; text-decoration: none;">Цена: £65</p>
+          <h3>Manchester United Condivo 22 Training Top</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-5">
+          <img src="/assets/product-image-5.jpg" alt="Product Image 5">
+          <p style="color: black; text-decoration: none;">Цена: £70</p>
+          <h3>Manchester United Icon Jersey</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-6">
+          <img src="/assets/product-image-6.jpg" alt="Product Image 6">
+          <p style="color: black; text-decoration: none;">Цена: £49</p>
+          <h3>Manchester United 22/23 Away Jersey</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-7">
+          <img src="/assets/product-image-7.jpg" alt="Product Image 7">
+          <p style="color: black; text-decoration: none;">Цена: £33</p>
+          <h3>Manchester United Graphic T-Shirt</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-8">
+          <img src="/assets/product-image-8.jpg" alt="Product Image 8">
+          <p style="color: black; text-decoration: none;">Цена: £45</p>
+          <h3>Manchester United Tiro 23 Training Jersey</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-9">
+          <img src="/assets/product-image-9.jpg" alt="Product Image 9">
+          <p style="color: black; text-decoration: none;">Цена: £59.50</p>
+          <h3>Manchester United 22/23 Home Goalkeeper Jersey</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-10">
+          <img src="/assets/product-image-10.jpg" alt="Product Image 10">
+          <p style="color: black; text-decoration: none;">Цена: £49</p>
+          <h3>Manchester United 22/23 Home Jersey</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-11">
+          <img src="/assets/product-image-11.jpg" alt="Product Image 11">
+          <p style="color: black; text-decoration: none;">Цена: £50</p>
+          <h3>Manchester United Essentials Trefoil Sweatshirt</h3>
+        </a>
+      </div>
+      <div class="product">
+        <a href="/product-12">
+          <img src="/assets/product-image-12.jpg" alt="Product Image 12">
+          <p style="color: black; text-decoration: none;">Цена: £35</p>
+          <h3>Adilette TND Slides</h3>
+        </a>
+      </div>
+      <!-- Добавьте ссылки для остальных продуктов -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 RedDevUtd. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
